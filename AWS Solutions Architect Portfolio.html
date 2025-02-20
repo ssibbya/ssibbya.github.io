@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sibbya Sunil - AWS Solutions Architect</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#60A5FA',
+secondary: '#3B82F6'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body { font-family: 'Inter', sans-serif; }
+.skill-bar { transition: width 0.3s ease-in-out; }
+.project-card:hover { transform: translateY(-5px); }
+.certification-card:hover { transform: scale(1.02); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+</style>
+</head>
+<body class="bg-white text-gray-900">
+<nav class="fixed top-0 w-full bg-white shadow-sm z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<span class="text-xl font-semibold text-primary">Sibbya Sunil</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#about" class="text-gray-600 hover:text-primary">About</a>
+<a href="#certifications" class="text-gray-600 hover:text-primary">Certifications</a>
+<a href="#experience" class="text-gray-600 hover:text-primary">Experience</a>
+<a href="#projects" class="text-gray-600 hover:text-primary">Projects</a>
+<a href="#contact" class="text-gray-600 hover:text-primary">Contact</a>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600 text-white py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div>
+<h1 class="text-4xl font-bold mb-4">AWS Solutions Architect</h1>
+<p class="text-xl mb-6">Building scalable and resilient cloud infrastructure solutions</p>
+<div class="flex space-x-4">
+<button class="bg-white text-primary px-6 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
+<i class="ri-download-line mr-2"></i>Download Resume
+</button>
+<button class="border border-white px-6 py-2 !rounded-button hover:bg-white hover:text-primary transition-colors whitespace-nowrap">
+<i class="ri-mail-line mr-2"></i>Contact Me
+</button>
+</div>
+</div>
+<div class="relative">
+<img src="https://public.readdy.ai/ai/img_res/d3c4f64b5315dcc1325c18889eac8a9a.jpg"
+alt="Sibbya Sunil"
+class="rounded-full shadow-xl object-cover w-96 h-96 mx-auto">
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold mb-4">Work Experience</h3>
+<div class="space-y-4">
+<div class="flex items-center">
+<div class="w-16 text-primary font-semibold">2021-Now</div>
+<div>Senior AWS Solutions Architect at Amazon Web Services</div>
+</div>
+<div class="flex items-center">
+<div class="w-16 text-primary font-semibold">2019-2021</div>
+<div>Cloud Architect at Microsoft</div>
+</div>
+<div class="flex items-center">
+<div class="w-16 text-primary font-semibold">2017-2019</div>
+<div>DevOps Engineer at Google</div>
+</div>
+</div>
+</div>
+<p class="text-gray-700 leading-relaxed mb-6">
+With over 8 years of experience in cloud architecture and infrastructure design, I specialize in building scalable, secure, and cost-effective solutions on AWS. My expertise includes microservices architecture, serverless computing, and DevOps practices.
+</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white shadow-sm p-4 rounded">
+<h3 class="font-semibold mb-2">Cloud Expertise</h3>
+<ul class="text-gray-600 space-y-2">
+<li>AWS Architecture</li>
+<li>Cloud Migration</li>
+<li>Cost Optimization</li>
+<li>Security & Compliance</li>
+</ul>
+</div>
+<div class="bg-white shadow-sm p-4 rounded">
+<h3 class="font-semibold mb-2">Technical Skills</h3>
+<ul class="text-gray-600 space-y-2">
+<li>Terraform</li>
+<li>Python</li>
+<li>Docker</li>
+<li>Kubernetes</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-300">AWS Services</span>
+<span class="text-primary">95%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-300">Infrastructure as Code</span>
+<span class="text-primary">90%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-300">DevOps Practices</span>
+<span class="text-primary">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-300">Security & Compliance</span>
+<span class="text-primary">88%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 88%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications Section -->
+<section id="certifications" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold mb-12 text-center">Certifications</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg certification-card transition-all duration-300 relative cursor-pointer" onclick="window.open('https://www.credly.com/badges/example', '_blank')">
+<div class="absolute top-4 right-4">
+<span class="bg-green-500 text-white text-xs px-2 py-1 rounded-full">Active</span>
+</div>
+<div class="flex items-start mb-4">
+<div class="w-16 h-16 flex items-center justify-center">
+<i class="ri-amazon-line text-4xl text-primary"></i>
+</div>
+<div class="flex-1 ml-4">
+<img src="https://public.readdy.ai/ai/img_res/249bc757a629b709b98ee32e5fb599f7.jpg"
+alt="AWS Certification"
+class="w-24 h-24 object-contain">
+</div>
+</div>
+<h3 class="text-xl font-semibold mb-2">AWS Solutions Architect Associate</h3>
+<p class="text-gray-400 mb-4">Certification ID: AWS-SAA-123456</p>
+<p class="text-gray-500">Issued: January 2024</p>
+<p class="text-gray-500">Expires: January 2027</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg certification-card transition-all duration-300 relative cursor-pointer" onclick="window.open('https://www.credly.com/badges/example', '_blank')">
+<div class="absolute top-4 right-4">
+<span class="bg-green-500 text-white text-xs px-2 py-1 rounded-full">Active</span>
+</div>
+<div class="flex items-start mb-4">
+<div class="w-16 h-16 flex items-center justify-center">
+<i class="ri-cloud-line text-4xl text-primary"></i>
+</div>
+<div class="flex-1 ml-4">
+<img src="https://public.readdy.ai/ai/img_res/bdebb658fdfb21b940bdae0962549d4e.jpg"
+alt="AWS Developer Certification"
+class="w-24 h-24 object-contain">
+</div>
+</div>
+<h3 class="text-xl font-semibold mb-2">AWS Developer Associate</h3>
+<p class="text-gray-400 mb-4">Certification ID: AWS-DVA-789012</p>
+<p class="text-gray-500">Issued: March 2024</p>
+<p class="text-gray-500">Expires: March 2027</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg certification-card transition-all duration-300 relative cursor-pointer" onclick="window.open('https://www.credly.com/badges/example', '_blank')">
+<div class="absolute top-4 right-4">
+<span class="bg-green-500 text-white text-xs px-2 py-1 rounded-full">Active</span>
+</div>
+<div class="flex items-start mb-4">
+<div class="w-16 h-16 flex items-center justify-center">
+<i class="ri-shield-check-line text-4xl text-primary"></i>
+</div>
+<div class="flex-1 ml-4">
+<img src="https://public.readdy.ai/ai/img_res/8464c5bcdfb66fdb42605785975bc516.jpg"
+alt="Terraform Certification"
+class="w-24 h-24 object-contain">
+</div>
+</div>
+<h3 class="text-xl font-semibold mb-2">HashiCorp Terraform Associate</h3>
+<p class="text-gray-400 mb-4">Certification ID: HC-TF-345678</p>
+<p class="text-gray-500">Issued: December 2023</p>
+<p class="text-gray-500">Expires: December 2025</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+<div class="bg-white rounded-lg shadow-sm overflow-hidden project-card transition-all duration-300">
+<img src="https://public.readdy.ai/ai/img_res/b86cacc8d008c5201513e1eee4cb6702.jpg"
+alt="Cloud Migration Project"
+class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Enterprise Cloud Migration</h3>
+<p class="text-gray-400 mb-4">Led the migration of a large-scale enterprise application to AWS, resulting in 40% cost reduction and improved performance.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">AWS</span>
+<span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Terraform</span>
+<span class="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full">Docker</span>
+</div>
+<div class="flex space-x-4">
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+<i class="ri-play-line mr-1"></i> Live Demo
+</button>
+<button class="border border-primary text-primary px-4 py-2 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+<i class="ri-arrow-right-line mr-1"></i> View Details
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm overflow-hidden project-card transition-all duration-300">
+<img src="https://public.readdy.ai/ai/img_res/fb1b86344df9a368d13f1072527f0d97.jpg"
+alt="Serverless Project"
+class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Serverless Data Processing</h3>
+<p class="text-gray-400 mb-4">Designed and implemented a serverless data processing pipeline handling 1M+ events daily with AWS Lambda and Step Functions.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Lambda</span>
+<span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">DynamoDB</span>
+<span class="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full">Python</span>
+</div>
+<div class="flex space-x-4">
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+<i class="ri-play-line mr-1"></i> Live Demo
+</button>
+<button class="border border-primary text-primary px-4 py-2 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+<i class="ri-arrow-right-line mr-1"></i> View Details
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm overflow-hidden project-card transition-all duration-300">
+<img src="https://public.readdy.ai/ai/img_res/e17cde19ebf3190dcc57e14f92eec2e0.jpg"
+alt="Microservices Project"
+class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Microservices Platform</h3>
+<p class="text-gray-400 mb-4">Built a scalable microservices platform using EKS and service mesh, supporting 50+ microservices.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">EKS</span>
+<span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Istio</span>
+<span class="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full">Go</span>
+</div>
+<div class="flex space-x-4">
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+<i class="ri-play-line mr-1"></i> Live Demo
+</button>
+<button class="border border-primary text-primary px-4 py-2 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+<i class="ri-arrow-right-line mr-1"></i> View Details
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm overflow-hidden project-card transition-all duration-300">
+<img src="https://public.readdy.ai/ai/img_res/65feb3db509fedda35151227c2d94921.jpg"
+alt="Security Project"
+class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Cloud Security Framework</h3>
+<p class="text-gray-400 mb-4">Implemented comprehensive security framework using AWS Security Hub, GuardDuty, and WAF, achieving compliance with industry standards.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Security Hub</span>
+<span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">WAF</span>
+<span class="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full">CloudTrail</span>
+</div>
+<div class="flex space-x-4">
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+<i class="ri-play-line mr-1"></i> Live Demo
+</button>
+<button class="border border-primary text-primary px-4 py-2 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+<i class="ri-arrow-right-line mr-1"></i> View Details
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm overflow-hidden project-card transition-all duration-300">
+<img src="https://public.readdy.ai/ai/img_res/e3be3def9b3c432cb71bd0fa15b54403.jpg"
+alt="Analytics Project"
+class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Data Analytics Platform</h3>
+<p class="text-gray-400 mb-4">Developed real-time analytics platform using AWS Analytics services, processing 10TB+ data daily with sub-second query performance.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Redshift</span>
+<span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Kinesis</span>
+<span class="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full">QuickSight</span>
+</div>
+<div class="flex space-x-4">
+<button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+<i class="ri-play-line mr-1"></i> Live Demo
+</button>
+<button class="border border-primary text-primary px-4 py-2 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+<i class="ri-arrow-right-line mr-1"></i> View Details
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-12 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
+<div class="max-w-md mx-auto">
+<div class="flex items-center justify-center space-x-3 mb-6">
+<div class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded">
+<i class="ri-mail-line"></i>
+</div>
+<a href="mailto:john.anderson@example.com" class="text-gray-600 hover:text-primary">john.anderson@example.com</a>
+</div>
+<div class="flex justify-center space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-200 hover:bg-primary hover:text-white rounded transition-colors">
+<i class="ri-linkedin-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-200 hover:bg-primary hover:text-white rounded transition-colors">
+<i class="ri-github-line"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-gray-50 text-gray-900 py-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h3 class="text-xl font-semibold mb-2">Sibbya Sunil</h3>
+<p class="text-gray-400 mb-4">AWS Solutions Architect Associate</p>
+<p class="text-gray-400">&copy; 2024 Sibbya Sunil. All rights reserved.</p>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.querySelector('form');
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+const formData = new FormData(form);
+const notification = document.createElement('div');
+notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded shadow-lg transform transition-transform duration-300';
+notification.textContent = 'Message sent successfully!';
+document.body.appendChild(notification);
+setTimeout(() => {
+notification.remove();
+}, 3000);
+form.reset();
+});
+const projectCards = document.querySelectorAll('.project-card');
+projectCards.forEach(card => {
+card.addEventListener('click', function() {
+const modal = document.createElement('div');
+modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+modal.innerHTML = `
+<div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4">
+<h3 class="text-2xl font-bold mb-4">${this.querySelector('h3').textContent}</h3>
+<p class="text-gray-400 mb-6">${this.querySelector('p').textContent}</p>
+<div class="flex justify-end">
+<button class="bg-primary text-white px-6 py-2 rounded hover:bg-opacity-90">Close</button>
+</div>
+</div>
+`;
+document.body.appendChild(modal);
+modal.querySelector('button').addEventListener('click', () => modal.remove());
+});
+});
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetSection = document.querySelector(targetId);
+window.scrollTo({
+top: targetSection.offsetTop - 64,
+behavior: 'smooth'
+});
+});
+});
+});
+</script>
+</body>
+</html>
