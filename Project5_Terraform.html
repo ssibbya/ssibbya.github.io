@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS Terraform Infrastructure Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      .gradient-bg {
+      background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+      }
+      .code-block {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4a90e2",
+              secondary: "#357abd",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white min-h-screen">
+    <nav class="bg-white shadow-sm py-4">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="font-['Pacifico'] text-2xl text-primary">logo</span>
+          </div>
+          <div class="flex items-center gap-8">
+            <a href="#" class="text-gray-700 hover:text-primary">Home</a>
+            <a href="#" class="text-gray-700 hover:text-primary">Features</a>
+            <a href="#" class="text-gray-700 hover:text-primary"
+              >Documentation</a
+            >
+            <a href="#" class="text-gray-700 hover:text-primary">Pricing</a>
+            <a href="#" class="text-gray-700 hover:text-primary">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header class="gradient-bg text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold mb-4">
+          AWS Terraform Infrastructure Documentation
+        </h1>
+        <p class="text-xl mb-8">
+          Enterprise-Scale Infrastructure as Code Implementation
+        </p>
+        <div class="flex gap-4">
+          <button
+            class="bg-white text-primary px-6 py-2 rounded-button hover:bg-opacity-90 flex items-center gap-2"
+          >
+            <i class="ri-download-line"></i>
+            Download Documentation
+          </button>
+          <button
+            class="border border-white px-6 py-2 rounded-button hover:bg-white hover:bg-opacity-10 flex items-center gap-2"
+          >
+            <i class="ri-github-line"></i>
+            View on GitHub
+          </button>
+        </div>
+      </div>
+    </header>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-8">
+            <a href="#overview" class="text-gray-700 hover:text-primary"
+              >Overview</a
+            >
+            <a href="#architecture" class="text-gray-700 hover:text-primary"
+              >Architecture</a
+            >
+            <a href="#implementation" class="text-gray-700 hover:text-primary"
+              >Implementation</a
+            >
+            <a href="#challenges" class="text-gray-700 hover:text-primary"
+              >Challenges</a
+            >
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="text-gray-700 hover:text-primary">
+              <i class="ri-search-line text-xl"></i>
+            </button>
+            <button class="text-gray-700 hover:text-primary">
+              <i class="ri-github-line text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="container mx-auto px-4 py-12">
+      <section id="overview" class="mb-16">
+        <h2 class="text-3xl font-bold mb-8">Project Overview</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-semibold mb-4">Project Scope</h3>
+            <p class="text-gray-600 mb-4">
+              Implementation of a highly available and scalable application
+              architecture using AWS Application Load Balancer (ALB), Auto
+              Scaling Groups, and Amazon RDS. The infrastructure is managed
+              through Terraform Cloud and follows GitOps practices with GitHub
+              integration for automated deployments. This setup ensures optimal
+              performance, reliability, and seamless scaling of application
+              resources based on demand.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                >AWS ALB</span
+              >
+              <span
+                class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm"
+                >Auto Scaling</span
+              >
+              <span
+                class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm"
+                >Amazon RDS</span
+              >
+              <span
+                class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm"
+                >Terraform Cloud</span
+              >
+              <span
+                class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm"
+                >GitOps</span
+              >
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-semibold mb-4">Technologies Used</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex items-center gap-3 p-4 border rounded-lg">
+                <i class="ri-aws-fill text-[#FF9900] text-2xl"></i>
+                <div>
+                  <h4 class="font-semibold">Amazon Web Services</h4>
+                  <p class="text-sm text-gray-600">
+                    Cloud Infrastructure Platform
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-4 border rounded-lg">
+                <i class="ri-terminal-box-line text-[#7B42BC] text-2xl"></i>
+                <div>
+                  <h4 class="font-semibold">Terraform</h4>
+                  <p class="text-sm text-gray-600">Infrastructure as Code</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-4 border rounded-lg">
+                <i class="ri-git-branch-line text-[#F05033] text-2xl"></i>
+                <div>
+                  <h4 class="font-semibold">Git</h4>
+                  <p class="text-sm text-gray-600">Version Control System</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-4 border rounded-lg">
+                <i class="ri-cloud-line text-[#2088FF] text-2xl"></i>
+                <div>
+                  <h4 class="font-semibold">Cloud Native</h4>
+                  <p class="text-sm text-gray-600">Modern Infrastructure</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="architecture" class="mb-16">
+        <h2 class="text-3xl font-bold mb-8">Architecture Overview</h2>
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+          <img
+            src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png"
+            alt="Architecture Diagram"
+            class="w-full rounded-lg mb-6"
+          />
+          <h3 class="text-xl font-semibold mb-4">Infrastructure Components</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="border rounded-lg p-4">
+              <div class="flex items-center gap-3 mb-3">
+                <i class="ri-server-line text-primary text-2xl"></i>
+                <h4 class="font-semibold">Application Layer</h4>
+              </div>
+              <ul class="text-gray-600 space-y-2">
+                <li>• Application Load Balancer</li>
+                <li>• EC2 Auto Scaling Groups</li>
+                <li>• Target Groups</li>
+                <li>• Health Checks</li>
+              </ul>
+            </div>
+            <div class="border rounded-lg p-4">
+              <div class="flex items-center gap-3 mb-3">
+                <i class="ri-database-2-line text-primary text-2xl"></i>
+                <h4 class="font-semibold">Database Layer</h4>
+              </div>
+              <ul class="text-gray-600 space-y-2">
+                <li>• Amazon RDS Multi-AZ</li>
+                <li>• Read Replicas</li>
+                <li>• Automated Backups</li>
+                <li>• Performance Insights</li>
+              </ul>
+            </div>
+            <div class="border rounded-lg p-4">
+              <div class="flex items-center gap-3 mb-3">
+                <i class="ri-git-merge-line text-primary text-2xl"></i>
+                <h4 class="font-semibold">CI/CD Pipeline</h4>
+              </div>
+              <ul class="text-gray-600 space-y-2">
+                <li>• GitHub Actions</li>
+                <li>• Terraform Cloud</li>
+                <li>• Infrastructure as Code</li>
+                <li>• Automated Deployments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="implementation" class="mb-16">
+        <h2 class="text-3xl font-bold mb-8">Implementation Details</h2>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-xl font-semibold mb-4">Core Infrastructure Module</h3>
+          <pre class="code-block overflow-x-auto mb-6">
+# Application Load Balancer Configuration
+module "alb" {
+  source  = "terraform-aws-modules/alb/aws"
+  version = "~> 8.0"
+  name = "app-alb"
+  load_balancer_type = "application"
+  vpc_id  = module.vpc.vpc_id
+  subnets = module.vpc.public_subnets
+  security_groups = [aws_security_group.alb.id]
+  target_groups = [
+    {
+      name             = "app-tg"
+      backend_protocol = "HTTP"
+      backend_port     = 80
+      target_type      = "instance"
+      health_check = {
+        path = "/health"
+        port = "traffic-port"
+      }
+    }
+  ]
+}
+# Auto Scaling Group Configuration
+module "asg" {
+  source  = "terraform-aws-modules/autoscaling/aws"
+  version = "~> 6.0"
+  name = "app-asg"
+  vpc_zone_identifier = module.vpc.private_subnets
+  target_group_arns  = module.alb.target_group_arns
+  health_check_type  = "ELB"
+  min_size = 2
+  max_size = 10
+  desired_capacity = 2
+  launch_template_name = "app-lt"
+  image_id = "ami-12345678"
+  instance_type = "t3.micro"
+}
+# RDS Configuration
+module "rds" {
+  source  = "terraform-aws-modules/rds/aws"
+  version = "~> 5.0"
+  identifier = "app-db"
+  engine     = "mysql"
+  engine_version = "8.0"
+  instance_class = "db.t3.medium"
+  allocated_storage = 20
+  multi_az = true
+  db_name  = "appdb"
+  username = "admin"
+  port     = "3306"
+  vpc_security_group_ids = [aws_security_group.rds.id]
+  subnet_ids = module.vpc.database_subnets
+  backup_retention_period = 7
+  backup_window = "03:00-04:00"
+  maintenance_window = "Mon:04:00-Mon:05:00"
+}</pre
+          >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-semibold mb-3">Module Structure</h4>
+              <ul class="space-y-2 text-gray-600">
+                <li>• Modular design for reusability</li>
+                <li>• Environment-specific configurations</li>
+                <li>• Standardized naming conventions</li>
+                <li>• Automated resource tagging</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-3">Best Practices</h4>
+              <ul class="space-y-2 text-gray-600">
+                <li>• State file management</li>
+                <li>• Version control integration</li>
+                <li>• Automated testing</li>
+                <li>• Documentation as code</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="challenges" class="mb-16">
+        <h2 class="text-3xl font-bold mb-8">Challenges & Solutions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <i class="ri-git-merge-line text-red-500 text-2xl"></i>
+              <h3 class="text-xl font-semibold">CI/CD Integration</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Challenge: Implementing a seamless CI/CD pipeline with GitHub and
+              Terraform Cloud while maintaining infrastructure security.
+            </p>
+            <div class="bg-blue-50 rounded-lg p-4">
+              <h4 class="font-semibold mb-2">Solution:</h4>
+              <ul class="text-gray-600 space-y-2">
+                <li>• GitHub Actions for automated testing</li>
+                <li>• Terraform Cloud for state management</li>
+                <li>• Pull request based deployments</li>
+                <li>• Infrastructure drift detection</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <i class="ri-scales-3-line text-yellow-500 text-2xl"></i>
+              <h3 class="text-xl font-semibold">Auto Scaling Strategy</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Challenge: Implementing efficient auto scaling policies while
+              optimizing costs and maintaining performance.
+            </p>
+            <div class="bg-blue-50 rounded-lg p-4">
+              <h4 class="font-semibold mb-2">Solution:</h4>
+              <ul class="text-gray-600 space-y-2">
+                <li>• Target tracking scaling policies</li>
+                <li>• Predictive scaling enabled</li>
+                <li>• Multi-AZ deployment</li>
+                <li>• Load balancer health checks</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-6 col-span-2">
+            <div class="flex items-center gap-3 mb-4">
+              <i class="ri-database-2-line text-blue-500 text-2xl"></i>
+              <h3 class="text-xl font-semibold">Database Performance</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Challenge: Ensuring optimal database performance and high
+              availability while handling increased load.
+            </p>
+            <div class="bg-blue-50 rounded-lg p-4">
+              <h4 class="font-semibold mb-2">Solution:</h4>
+              <ul class="text-gray-600 space-y-2">
+                <li>• RDS Multi-AZ deployment for high availability</li>
+                <li>• Read replicas for read scaling</li>
+                <li>• Automated backup and point-in-time recovery</li>
+                <li>• Performance Insights monitoring</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-50 border-t">
+      <div class="container mx-auto px-4 py-12">
+        <div class="flex justify-between items-center">
+          <div class="text-gray-600">Last updated: February 20, 2025</div>
+          <div class="flex gap-4">
+            <button class="text-gray-600 hover:text-primary">
+              <i class="ri-github-line text-xl"></i>
+            </button>
+            <button class="text-gray-600 hover:text-primary">
+              <i class="ri-linkedin-line text-xl"></i>
+            </button>
+            <button class="text-gray-600 hover:text-primary">
+              <i class="ri-twitter-line text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
