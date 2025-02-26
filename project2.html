@@ -38,7 +38,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
           <div class="flex items-center">
-            <span class="text-2xl font-bold text-primary">Serverless Chatbot Guide</span>
+            <a href="https://ssibbya.github.io/"><span class="text-2xl font-semibold text-primary">← Back to Portfolio</span>
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@
     <main class="pt-16">
       <header class="bg-gradient-to-br from-blue-400 to-indigo-600 text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 class="text-4xl font-bold mb-4">Serverless Chatbot for FAQs</h1>
+          <h1 class="text-4xl font-bold mb-4">Automated Deployment for static </h1>
           <p class="text-lg">Deploy a chatbot using AWS Lambda, API Gateway, and DynamoDB.</p>
         </div>
       </header>
@@ -67,7 +67,9 @@
               <h3 class="text-2xl font-semibold mb-4">3. Create a Lambda Function</h3>
               <p class="text-gray-600">Go to AWS Lambda, create a new function, and choose Python or Java as the runtime. Write a script that fetches an answer from DynamoDB when a user inputs a question.</p>
               <img src="images2/lambda.png" alt="lambda" class="w-full rounded-lg mt-4" />
-              <pre class="bg-gray-900 text-white p-4 rounded-lg text-sm">import boto3
+              <div class="max-w-2xl mx-auto"><br>
+        <div class="bg-gray-900 text-white p-4 rounded-lg text-sm">
+            <pre id="codeBlock" class="overflow-hidden max-h-40">import boto3
 import json
 import boto3
 
@@ -113,8 +115,10 @@ def lambda_handler(event, context):
             'headers': headers,  # Ensure CORS headers are returned on error
             'body': json.dumps({'error': str(e)})
         }
-
-              </pre>
+            </pre>
+            <button id="toggleBtn" class="mt-2 text-blue-400">Show More</button>
+        </div>
+    </div>
             </div>
             <div class="bg-gray-50 shadow-sm p-6 rounded-lg step-card">
               <h3 class="text-2xl font-semibold mb-4">4. Attach IAM Policy to Lambda</h3>
@@ -143,5 +147,17 @@ def lambda_handler(event, context):
         </div>
       </section>
     </main>
+     <script>
+        const codeBlock = document.getElementById('codeBlock');
+        const toggleBtn = document.getElementById('toggleBtn');
+        let expanded = false;
+
+        toggleBtn.addEventListener('click', () => {
+            expanded = !expanded;
+            codeBlock.classList.toggle('max-h-40', !expanded);
+            codeBlock.classList.toggle('max-h-screen', expanded);
+            toggleBtn.textContent = expanded ? "Show Less" : "Show More";
+        });
+    </script>
   </body>
 </html>

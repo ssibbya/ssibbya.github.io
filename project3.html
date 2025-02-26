@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CI/CD Pipeline for Static Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#60A5FA",
+              secondary: "#3B82F6",
+            },
+            borderRadius: {
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .step-card:hover {
+        transform: translateY(-3px);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <nav class="fixed top-0 w-full bg-white shadow-sm z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="https://ssibbya.github.io/"><span class="text-2xl font-semibold text-primary">← Back to Portfolio</span>
+          </div>
+      </div>
+    </nav>
+    <main class="pt-16">
+      <header class="bg-gradient-to-br from-blue-400 to-indigo-600 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-4xl font-bold mb-4">CI/CD Pipeline for Static Website</h1>
+          <p class="text-lg">Automate deployment using GitHub, CodePipeline and CodeDeploy.</p>
+        </div>
+      </header>
+      <section id="steps" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold mb-8 text-center">Step-by-Step Implementation</h2>
+          <div class="space-y-6">
+            <div class="bg-gray-50 shadow-sm p-6 rounded-lg step-card">
+              <h3 class="text-2xl font-semibold mb-4">1. Upload Static Website to GitHub</h3>
+              <p class="text-gray-600">Create a GitHub repository and upload your static website files. Ensure that the repository is public or properly authenticated for CodePipeline access.</p>
+              <img src="images3/github.png" alt="github" class="w-full rounded-lg mt-4" />
+            </div>
+            <div class="bg-gray-50 shadow-sm p-6 rounded-lg step-card">
+              <h3 class="text-2xl font-semibold mb-4">2. Create an S3 Bucket</h3>
+              <p class="text-gray-600">Go to the AWS Console, navigate to S3, and create a bucket to store your website files. Enable static website hosting and set proper permissions.</p>
+            </div>
+            <div class="bg-gray-50 shadow-sm p-6 rounded-lg step-card">
+              <h3 class="text-2xl font-semibold mb-4">3. Set Up CodePipeline</h3>
+              <p class="text-gray-600">Navigate to AWS CodePipeline and create a new pipeline. Select GitHub as the source provider and connect it to your repository.</p>
+              <img src="images3/codepipeline.png" alt="CodePipeline" class="w-full rounded-lg mt-4" />
+            </div>
+            <div class="bg-gray-50 shadow-sm p-6 rounded-lg step-card">
+              <h3 class="text-2xl font-semibold mb-4">5. Deploy to S3 Using CodeDeploy</h3>
+              <p class="text-gray-600">In the deploy stage of CodePipeline, select Amazon S3 as the deployment provider and choose your target S3 bucket.</p>
+               <img src="images3/deploy.png" alt="CodePipeline" class="w-full rounded-lg mt-4" />
+            </div>
+            <div class="bg-gray-50 shadow-sm p-6 rounded-lg step-card">
+              <h3 class="text-2xl font-semibold mb-4">6. Test Deployment</h3>
+              <p class="text-gray-600">Push a change to your GitHub repository and check if the update is automatically deployed to S3.</p><br>
+              <h3 class="text-2xl font-semibold mb-4">Static Website before making any changes</h3>
+              <img src="images3/before.png" alt="CodePipeline" class="w-full rounded-lg mt-4" /><br>
+              <h3 class="text-2xl font-semibold mb-4">Code changes made</h3>
+              <img src="images3/code.png" alt="CodePipeline" class="w-full rounded-lg mt-4" /><br>
+              <h3 class="text-2xl font-semibold mb-4">After GitHub changes are commited, Code Pipeline runs</h3>
+              <img src="images3/process.png" alt="CodePipeline" class="w-full rounded-lg mt-4" /><br>
+              <h3 class="text-2xl font-semibold mb-4">Static Website after making any changes</h3>
+              <img src="images3/after.png" alt="CodePipeline" class="w-full rounded-lg mt-4" /><br>
+              <p>Thus we can authomatically deploy code to production, without manual intervention.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
