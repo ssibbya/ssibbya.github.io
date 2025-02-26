@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deploying a Static Website on AWS S3 & CloudFront</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#60A5FA",
+              secondary: "#3B82F6",
+            },
+            borderRadius: {
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .guide-card:hover {
+        transform: scale(1.02);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <nav class="fixed top-0 w-full bg-white shadow-sm z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <span class="font-['Pacifico'] text-2xl text-primary">Sibbya Sunil</span>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#overview" class="text-gray-600 hover:text-primary">Overview</a>
+            <a href="#steps" class="text-gray-600 hover:text-primary">Steps</a>
+            <a href="#benefits" class="text-gray-600 hover:text-primary">Benefits</a>
+            <a href="#contact" class="text-gray-600 hover:text-primary">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="pt-16">
+      <header class="bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600 text-white py-20"style = "align-content: center;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-4xl font-bold mb-4">Deploying a Static Website on AWS</h1>
+          <p class="text-xl mb-6">Using S3 for Hosting and CloudFront for Fast Content Delivery</p>
+        </div>
+      </header>
+      <section id="steps" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold mb-8 text-center">Step-by-Step Guide</h2>
+          <div class="bg-gray-50 shadow-sm p-6 rounded-lg guide-card">
+            <h3 class="text-2xl font-semibold mb-4">1. Create an S3 Bucket</h3>
+            <p class="text-gray-600 mb-4">Go to AWS S3, create a bucket, enable static website hosting, and upload your HTML files.</p>
+            
+            <h3 class="text-2xl font-semibold mb-4">2. Configure CloudFront</h3>
+            <p class="text-gray-600 mb-4">Create a CloudFront distribution, set the origin as your S3 bucket, and configure caching settings.</p>
+            
+            <h3 class="text-2xl font-semibold mb-4">3. Update DNS with Route 53</h3>
+            <p class="text-gray-600 mb-4">Use AWS Route 53 to create a custom domain and point it to CloudFront.</p>
+            <br>
+            <h3>For detailed guidance, visit my static S3 webpage</h3>
+            <p style = "color:#3b82f6;"><a href = "https://d2olzoz2q4x7jx.cloudfront.net"><b>Click here</b></a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
