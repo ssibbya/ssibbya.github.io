@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scalable Forum Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#60A5FA",
+              secondary: "#3B82F6",
+            },
+            borderRadius: {
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .guide-card:hover {
+        transform: scale(1.02);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <nav class="fixed top-0 w-full bg-white shadow-sm z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="portfolio.html"><span class="text-2xl font-semibold text-primary">← Back to Projects</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="pt-16">
+      <header class="bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600 text-white py-10 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 class="text-4xl font-bold mb-4">Scalable Forum Application</h1>
+          <p class="text-xl mb-6">Step-by-step guide to deploying a scalable web app using ALB, Auto Scaling, and RDS with Terraform.</p>
+        </div>
+      </header>
+      <section id="architecture" class="py-10 bg-white text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold mb-8">High-Level Architecture</h2>
+          <img src="images5/architecture.png" alt="High-Level Architecture Diagram" class="mx-auto shadow-lg rounded-lg" />
+        </div></section>
+        <section id="steps" class="py-10 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-gray-600 mb-6">This architecture follows a 3-tier model designed for high availability, scalability, and security. It consists of:</p>
+        <ul class="list-disc list-inside text-gray-700">
+            <li><strong>Presentation Layer: </strong>The Application Load Balancer (ALB) routes external traffic to EC2 instances.</li>
+            <li><strong>Application Layer: </strong>EC2 instances are deployed in private subnets and managed by an Auto Scaling Group.</li>
+            <li><strong>Database Layer: </strong>Amazon RDS PostgreSQL is placed in private subnets for secure database access.</li>
+        </ul>
+          <p class="text-gray-600 mb-6">To ensure secure and efficient operations, AWS VPC Endpoints for SSM, EC2 Messages, and SSM Messages are used, allowing EC2 instances to connect to AWS Systems Manager without an Internet Gateway or NAT Gateway.</p><br>
+          <h2 class="text-3xl font-bold mb-8">Well-Architected Framework Alignment</h2>
+          <ul class="list-disc list-inside text-gray-700">
+            <li><strong>Security- </strong>Private subnets for EC2 and RDS, security groups, and VPC endpoints prevent unnecessary internet exposure.</li>
+            <li><strong>Reliability- </strong>Multi-AZ deployment and Auto Scaling ensure high availability and fault tolerance.</li>
+            <li><strong>Performance Efficiency- </strong>Load balancing distributes traffic efficiently, and VPC Endpoints reduce latency for AWS service connections.</li>
+            <li><strong>Cost Optimization- </strong>Eliminates the need for a NAT Gateway, reducing costs while maintaining secure SSM connectivity.</li>
+            <li><strong>Operational Excellence- </strong>AWS Systems Manager (via VPC Endpoints) enables easy remote management without requiring public access.</li>
+          </ul>
+          <p class="text-gray-600 mb-6">This setup ensures a highly available, secure, and cost-effective deployment for the Scalable Forum Application.</p>
+        </div></section>
+      
+      <section id="steps" class="py-10 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold mb-8 text-center">Step-by-Step Guide</h2>
+          <div class="bg-gray-50 shadow-sm p-6 rounded-lg guide-card">
+            <h3 class="text-2xl font-semibold mb-4">1. Set Up the Terraform Project</h3>
+            <p class="text-gray-600 mb-4">- Initialize a GitHub repository and push Terraform configuration files.</p>
+            <img src="images5/git.png" alt="High-Level Architecture Diagram" class="mx-auto shadow-lg rounded-lg" />
+            <p class="text-gray-600 mb-4">- Login to Terraform Cloud or install Terraform CLI and configure AWS credentials.</p><br>
+            <img src="images5/variables.png" alt="High-Level Architecture Diagram" class="mx-auto shadow-lg rounded-lg" /><br>
+            
+            <h3 class="text-2xl font-semibold mb-4">2. Create a VPC and Subnets</h3>
+            <p class="text-gray-600 mb-4">- Define a custom VPC using Terraform.</p>
+            <p class="text-gray-600 mb-4">- Create public and private subnets across multiple availability zones.</p>
+            
+            <h3 class="text-2xl font-semibold mb-4">3. Deploy an Application Load Balancer (ALB)</h3>
+            <p class="text-gray-600 mb-4">- Configure an ALB to distribute traffic across multiple EC2 instances.</p>
+            <p class="text-gray-600 mb-4">- Set up target groups and security groups.</p>
+            <br><img src="images5/alb.png" alt="High-Level Architecture Diagram" class="mx-auto shadow-lg rounded-lg" /><br>
+            <h3 class="text-2xl font-semibold mb-4">4. Implement Auto Scaling</h3>
+            <p class="text-gray-600 mb-4">- Define an Auto Scaling group with launch templates.</p>
+            <p class="text-gray-600 mb-4">- Configure scaling policies based on CPU usage.</p>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><br>
+          <h2 class="text-3xl font-bold mb-8 text-center">Why I Created Three VPC Endpoints</h2>
+          <p class="text-gray-600 mb-6">Since our EC2 instances are placed inside private subnets, they cannot directly access the internet. Instead of using a NAT Gateway, we created three VPC endpoints to allow secure communication with AWS Systems Manager:</p>
+          <ul class="list-disc list-inside text-gray-700">
+            <li><strong>SSM Endpoint:</strong> Enables communication with AWS Systems Manager for running commands, patching, and automation.</li>
+            <li><strong>EC2Messages Endpoint:</strong> Facilitates messaging between EC2 instances and AWS Systems Manager for Session Manager and Run Command.</li>
+            <li><strong>SSMMessages Endpoint:</strong> Ensures the SSM Agent can send and receive messages securely through Systems Manager.</li>
+          </ul>
+          <br><img src="images5/vpcend.png" alt="High-Level Architecture Diagram" class="mx-auto shadow-lg rounded-lg" /><br>
+          <p class="text-gray-600 mt-6">Using VPC endpoints instead of a NAT Gateway reduces costs and improves security by keeping traffic within AWS.</p>
+        </div><br>
+            <h3 class="text-2xl font-semibold mb-4">5. Deploy RDS Database</h3>
+            <p class="text-gray-600 mb-4">- Create an Amazon RDS instance in private subnets.</p>
+            <p class="text-gray-600 mb-4">- Configure security groups to allow access from the application servers.</p>
+            <br><img src="images5/db.png" alt="High-Level Architecture Diagram" class="mx-auto shadow-lg rounded-lg" /><br>
+            
+            <h3 class="text-2xl font-semibold mb-4">6. Set Up Terraform</h3>
+            <p class="text-gray-600 mb-4">- Use GitHub to trigger Terraform apply on push.</p>
+            <p class="text-gray-600 mb-4">- Implement Terraform Cloud or AWS CodePipeline for automated deployments.</p>
+            <p class="text-gray-600 mb-4">- Terraform Plan</p>
+            <br><img src="images5/terraplan.png" alt="High-Level Architecture Diagram" class="mx-auto shadow-lg rounded-lg" /><br>
+            <p class="text-gray-600 mb-4">- Terraform Apply</p>
+            <br><img src="images5/terraapply.png" alt="High-Level Architecture Diagram" class="mx-auto shadow-lg rounded-lg" /><br>
+            <p class="text-gray-600 mb-4">- Connected made using AWS Systems Manager: </p>
+            <p class="text-gray-600 mb-4">Installed PostgreSQL </p>
+            <img src="images5/op1.png" alt="High-Level Architecture Diagram" class="mx-auto shadow-lg rounded-lg" />
+            <br><img src="images5/op2.png" alt="High-Level Architecture Diagram" class="mx-auto shadow-lg rounded-lg" /><br>
+            <p class="text-gray-600 mb-4">Created Database, table and inserted values</p>
+            <img src="images5/op3.png" alt="High-Level Architecture Diagram" class="mx-auto shadow-lg rounded-lg" />
+            <br><img src="images5/op4.png" alt="High-Level Architecture Diagram" class="mx-auto shadow-lg rounded-lg" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
